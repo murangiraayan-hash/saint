@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saint Michael Technical High School</title>
+  <style>
+    :root {
+      --navy: #59171B;
+      --burgundy: #59171B;
+      --burgundy-dark: #3A0F12;
+      --peach: #FED7B8;
+      --soft-peach: #FFF3E8;
+      --line: #59171B;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: var(--soft-peach); color: var(--navy); line-height: 1.6; }
+    header { background: linear-gradient(110deg, #59171B 0%, #8C4B47 100%); color: #fff; padding: 16px 5%; border-bottom: 4px solid var(--peach); display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; }
+    header h1 { font-size: 1.25rem; font-family: Georgia, serif; }
+    nav a { color: #fff; text-decoration: none; font-weight: bold; margin-left: 18px; font-size: 0.95rem; }
+    nav a:hover { color: var(--peach); }
+    .container { max-width: 1100px; margin: auto; padding: 40px 5%; }
+    .hero { background: var(--navy); color: #fff; border-radius: 20px; border: 3px solid var(--peach); padding: 40px 6%; margin-bottom: 40px; box-shadow: 0 10px 30px rgba(89,23,27,0.2); }
+    .hero .eyebrow { display: inline-block; font-size: 0.75rem; font-weight: bold; text-transform: uppercase; letter-spacing: 0.12em; color: var(--peach); border: 2px solid var(--peach); padding: 4px 14px; border-radius: 999px; margin-bottom: 16px; }
+    .hero h2 { font-size: 2.2rem; font-family: Georgia, serif; margin-bottom: 14px; }
+    .hero h2 span.name { background: var(--peach); color: var(--navy); padding: 3px 12px; border-radius: 6px; display: inline-block; margin-top: 6px; }
+    .hero p { max-width: 700px; font-size: 1.05rem; opacity: 0.95; margin-bottom: 24px; }
+    .btn { display: inline-block; background: var(--peach); color: var(--navy); font-weight: bold; padding: 12px 24px; border-radius: 999px; text-decoration: none; border: 2px solid var(--peach); cursor: pointer; font-size: 0.95rem; }
+    .btn.alt { background: transparent; color: var(--peach); margin-left: 10px; }
+    .btn:hover { opacity: 0.9; }
+    .section-title { font-size: 1.8rem; font-family: Georgia, serif; border-left: 6px solid var(--navy); padding-left: 12px; margin-bottom: 24px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 40px; }
+    .card { background: var(--peach); border: 2px solid var(--navy); border-top-width: 6px; border-radius: 12px; padding: 22px; color: var(--navy); }
+    .card h3 { font-size: 1.15rem; margin-bottom: 8px; font-family: Georgia, serif; }
+    table { width: 100%; border-collapse: collapse; background: #fff; border: 2px solid var(--navy); border-radius: 10px; overflow: hidden; margin-bottom: 30px; }
+    th { background: var(--navy); color: var(--peach); padding: 12px 16px; text-align: left; }
+    td { padding: 12px 16px; border-bottom: 1px solid rgba(89,23,27,0.15); }
+    .form-box { background: #fff; border: 3px solid var(--navy); border-radius: 16px; padding: 30px; box-shadow: 0 8px 24px rgba(89,23,27,0.08); margin-bottom: 40px; }
+    .form-box h3 { font-family: Georgia, serif; font-size: 1.3rem; margin-bottom: 16px; border-bottom: 2px solid var(--soft-peach); padding-bottom: 8px; }
+    .form-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+    .full-width { grid-column: 1 / -1; }
+    label { display: block; font-weight: bold; font-size: 0.85rem; margin-bottom: 4px; }
+    input, select, textarea { width: 100%; padding: 10px 12px; border: 2px solid rgba(89,23,27,0.3); border-radius: 8px; font-size: 0.95rem; background: var(--soft-peach); color: var(--navy); font-family: inherit; }
+    input:focus, select:focus, textarea:focus { outline: none; border-color: var(--navy); background: #fff; }
+    .paybox { display: none; padding: 16px; border: 2px dashed var(--navy); border-radius: 10px; background: var(--soft-peach); margin-top: 16px; }
+    .paybox.show { display: block; }
+    footer { background: var(--navy); color: #fff; text-align: center; padding: 24px; border-top: 4px solid var(--peach); margin-top: 40px; font-size: 0.9rem; }
+    .backend-badge { background: #10B981; color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: bold; margin-left: 8px; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Saint Michael Technical High School</h1>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#programs">Programs</a>
+    <a href="#fees">Fees</a>
+    <a href="#register">Register</a>
+    <a href="http://localhost/smths_backend/admin.php" target="_blank">PHP Admin <span class="backend-badge">PHP</span></a>
+  </nav>
+</header>
+
+<div class="container">
+
+  <section id="home" class="hero">
+    <span class="eyebrow">A School of Technics</span>
+    <h2>Welcome to<br><span class="name">Saint Michael Technical High School</span></h2>
+    <p>Saint Michael Technical High School trains students with certified practical skills for the world of work across five accredited trades (Software Development, Food and Beverage, Computer Systems, Architecture and Multimedia).</p>
+    <a href="#register" class="btn">Online Registration</a>
+    <a href="#programs" class="btn alt">Explore Programs</a>
+  </section>
+
+  <section id="programs">
+    <h2 class="section-title">Technical Programs</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>1. Software Development</h3>
+        <p>Build web applications, websites, APIs and database architectures with PHP & MySQL.</p>
+      </div>
+      <div class="card">
+        <h3>2. Food & Beverage</h3>
+        <p>Culinary arts, restaurant service, hospitality and food safety standards.</p>
+      </div>
+      <div class="card">
+        <h3>3. Computer Systems</h3>
+        <p>Hardware maintenance, PC repair, computer networks and system administration.</p>
+      </div>
+      <div class="card">
+        <h3>4. Architecture</h3>
+        <p>Architectural drafting, structural planning, AutoCAD 2D/3D and land modeling.</p>
+      </div>
+      <div class="card">
+        <h3>5. Multimedia</h3>
+        <p>Digital photography, video editing, audio production and 2D/3D animation.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="fees">
+    <h2 class="section-title">Fees & Payment Options</h2>
+    <table>
+      <thead>
+        <tr><th>Fee Item</th><th>Amount (RWF)</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Registration & Admission Fee</td><td><b>20,000 RWF</b></td></tr>
+        <tr><td>School Tuition Fees (per term)</td><td><b>120,000 RWF</b></td></tr>
+        <tr><td>School Uniform & Sports Attire</td><td><b>35,000 RWF</b></td></tr>
+        <tr><td>Practical Workshop Learning Materials</td><td><b>25,000 RWF</b></td></tr>
+      </tbody>
+    </table>
+
+    <div class="form-box">
+      <h3>Pay Fees with MoMo or Bank</h3>
+      <form id="payForm">
+        <div class="form-grid">
+          <div>
+            <label>Student Full Name</label>
+            <input type="text" id="pay_name" required placeholder="e.g. Mugisha Emmanuel">
+          </div>
+          <div>
+            <label>Phone Number</label>
+            <input type="tel" id="pay_phone" required placeholder="0788XXXXXX">
+          </div>
+          <div>
+            <label>Program</label>
+            <select id="pay_prog" required>
+              <option value="p1">Software Development</option>
+              <option value="p2">Food and Beverage</option>
+              <option value="p3">Computer Systems</option>
+              <option value="p4">Architecture</option>
+              <option value="p5">Multimedia</option>
+            </select>
+          </div>
+          <div>
+            <label>Payment Method</label>
+            <select id="pay_method" required>
+              <option value="momo">MTN Mobile Money (*182#)</option>
+              <option value="bk">Bank of Kigali (BK)</option>
+              <option value="bpr">BPR Bank</option>
+              <option value="equity">Equity Bank</option>
+            </select>
+          </div>
+          <div class="full-width">
+            <button type="submit" class="btn">Submit Payment</button>
+          </div>
+        </div>
+      </form>
+      <div id="paybox" class="paybox"></div>
+    </div>
+  </section>
+
+  <section id="register">
+    <h2 class="section-title">Online Student Registration (PHP Backend Connected)</h2>
+    <div class="form-box">
+      <form id="regForm" action="http://localhost/smths_backend/register.php" method="POST">
+        <div class="form-grid">
+          <div>
+            <label>Student's Full Name *</label>
+            <input type="text" name="name" id="reg_name" required placeholder="Full Name">
+          </div>
+          <div>
+            <label>Date of Birth *</label>
+            <input type="date" name="dob" id="reg_dob" required>
+          </div>
+          <div>
+            <label>District / Residence *</label>
+            <input type="text" name="district" id="reg_district" required placeholder="District">
+          </div>
+          <div>
+            <label>Last School Attended</label>
+            <input type="text" name="school" id="reg_school" placeholder="Previous School">
+          </div>
+          <div class="full-width">
+            <label>Program of Choice *</label>
+            <select name="prog" id="reg_prog" required>
+              <option value="p1">Software Development (p1)</option>
+              <option value="p2">Food and Beverage (p2)</option>
+              <option value="p3">Computer Systems (p3)</option>
+              <option value="p4">Architecture (p4)</option>
+              <option value="p5">Multimedia (p5)</option>
+            </select>
+          </div>
+          <div>
+            <label>Parent / Guardian Name *</label>
+            <input type="text" name="parent" id="reg_parent" required placeholder="Parent Name">
+          </div>
+          <div>
+            <label>Parent Phone Number *</label>
+            <input type="tel" name="phone" id="reg_phone" required placeholder="0788XXXXXX">
+          </div>
+          <div class="full-width">
+            <label>Email Address (Optional)</label>
+            <input type="email" name="email" id="reg_email" placeholder="email@example.com">
+          </div>
+          <div class="full-width">
+            <label>Message / Question (Optional)</label>
+            <textarea name="msg" id="reg_msg" rows="3" placeholder="Any additional notes..."></textarea>
+          </div>
+          <div class="full-width">
+            <button type="submit" class="btn">Save & Register Student</button>
+          </div>
+        </div>
+      </form>
+      <div id="regResult" class="paybox"></div>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  &copy; Saint Michael Technical High School. All rights reserved.
+</footer>
+
+<script>
+  // Payment Simulator
+  document.getElementById('payForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    var name = document.getElementById('pay_name').value;
+    var method = document.getElementById('pay_method').value;
+    var box = document.getElementById('paybox');
+    var details = '';
+    if (method === 'momo') {
+      details = 'MoMo Code: <b>*182*8*1*054321#</b> (Saint Michael THS)';
+    } else if (method === 'bk') {
+      details = 'BK Account: <b>00040-0694821-34</b>';
+    } else if (method === 'bpr') {
+      details = 'BPR Account: <b>400-3498210-11</b>';
+    } else {
+      details = 'Equity Account: <b>400211-098231</b>';
+    }
+    box.className = 'paybox show';
+    box.innerHTML = '<strong>Payment Request Created for ' + name + '</strong><br>' + details + '<br><small>Bring transaction confirmation SMS or bank slip to school.</small>';
+  });
+
+  // Registration Form handling (AJAX with fallback)
+  document.getElementById('regForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    var data = {
+      name: document.getElementById('reg_name').value,
+      dob: document.getElementById('reg_dob').value,
+      district: document.getElementById('reg_district').value,
+      school: document.getElementById('reg_school').value,
+      prog: document.getElementById('reg_prog').value,
+      parent: document.getElementById('reg_parent').value,
+      phone: document.getElementById('reg_phone').value,
+      email: document.getElementById('reg_email').value,
+      msg: document.getElementById('reg_msg').value
+    };
+
+    var resultBox = document.getElementById('regResult');
+    resultBox.className = 'paybox show';
+    resultBox.innerHTML = 'Connecting to PHP Backend at <code>http://localhost/smths_backend/register.php</code>...';
+
+    // Try posting to local PHP backend
+    fetch('http://localhost/smths_backend/register.php', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    })
+    .then(function(res) { return res.json(); })
+    .then(function(json) {
+      if (json.success) {
+        resultBox.innerHTML = '<strong style="color:green;">Registration Saved in PHP & MySQL Database!</strong><br>Code: <b>' + json.reg_code + '</b><br>Student: ' + json.student_name + '<br><a href="https://wa.me/250788123456?text=' + encodeURIComponent('Saint Michael Registration: ' + json.student_name + ' (' + json.reg_code + ')') + '" target="_blank" class="btn" style="margin-top:10px;">Send via WhatsApp</a>';
+      } else {
+        throw new Error(json.message || 'Error');
+      }
+    })
+    .catch(function(err) {
+      // Local demo fallback if PHP server is not currently running
+      var fakeCode = 'SMTHS-2025-' + Math.floor(1000 + Math.random() * 9000);
+      resultBox.innerHTML = '<strong>Registration Prepared (Local Mode)</strong><br>Student: <b>' + data.name + '</b><br>Code: <b>' + fakeCode + '</b><br><small>Note: To save directly into MySQL, ensure XAMPP is running and smths_backend is in your htdocs folder.</small><br><br><a href="https://wa.me/250788123456?text=' + encodeURIComponent('Registration for Saint Michael: ' + data.name + ' (' + fakeCode + ')') + '" target="_blank" class="btn" style="display:inline-block;margin-top:8px;">Send via WhatsApp</a>';
+    });
+  });
+</script>
+
+</body>
+</html>
